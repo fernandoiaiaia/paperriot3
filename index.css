@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.glitch-text {
+  position: relative;
+  color: white;
+  text-shadow: 2px 0 red, -2px 0 blue;
+}
+.glitch-text.glitch {
+  animation: glitch 0.3s infinite;
+}
+@keyframes glitch {
+  0%   { text-shadow: 2px 0 red, -2px 0 blue; }
+  20%  { text-shadow: -2px -2px red, 2px 2px blue; }
+  40%  { text-shadow: 2px 2px red, -2px -2px blue; }
+  60%  { text-shadow: -2px 0 red, 2px 0 blue; }
+  80%  { text-shadow: 2px -2px red, -2px 2px blue; }
+  100% { text-shadow: 2px 0 red, -2px 0 blue; }
+}
